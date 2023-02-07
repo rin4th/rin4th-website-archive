@@ -18,7 +18,13 @@ import Navigation from '../components/Navigation.astro';
 		<title>{title}</title>
 	</head>
 	<body class="bg-neutral-900 pb-3 px-6 pt-6">
-    <Navigation />
+    <div class="flex relative">
+      <Navigation class="relative left-0 top-0 flex-none w-32 h-32"/>
+      <div class="absolute mb-6 inset-y-0 right-10 w-3/4 container mx-auto rounded overflow-hidden bg-stone-700">
+      </div>
+    </div>
+      
+    </div>
 		<slot />
 	</body>
 </html>
