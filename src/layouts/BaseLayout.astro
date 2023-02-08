@@ -7,6 +7,7 @@ import '../styles/global.css';
 const { title } = Astro.props;
 import Navigation from '../components/Navigation.astro';
 import Card from '../components/Card.astro';
+import HeaderIndex from '../components/HeaderIndex.astro';
 ---
 
 <!DOCTYPE html>
@@ -18,14 +19,14 @@ import Card from '../components/Card.astro';
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body class="bg-more-dark pb-3 px-6 pt-6">
-    <div class="flex relative">
-      <div class="grid h-screen content-center">
-        <Navigation class="relative left-0 top-0 flex-none w-32 h-32"/>
+	<body class="bg-more-dark px-6 py-6">
+    <div class="flex container flex-row gap-x-3">
+      <div class="fixed flex flex-col float-left items-center justify-center h-screen ml-6">
+        <Navigation />
       </div>
-      <div class="absolute mb-5 inset-y-0 right-10 w-3/4 container mx-auto rounded overflow-hidden bg-front-dark">
-        <div class="absolute inset-y-0 container mx-4 w-full rounded overflow-hidden bg-front-dark border-2 border-white my-4">
-          
+      <div class="ml-64 p-5 w-3/4 items-end float-right justify-end container overflow-hidden bg-front-dark mr-10 rounded">
+        <div class="rounded overflow-hidden bg-front-dark border-2 border-white min-h-[1000px]">
+          <HeaderIndex />
         </div>
       </div>
     </div>
