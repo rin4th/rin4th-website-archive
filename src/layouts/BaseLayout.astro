@@ -6,6 +6,7 @@ export interface Props {
 import '../styles/global.css';
 const { title } = Astro.props;
 import Navigation from '../components/Navigation.astro';
+import Card from '../components/Card.astro';
 ---
 
 <!DOCTYPE html>
@@ -17,13 +18,17 @@ import Navigation from '../components/Navigation.astro';
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body class="bg-neutral-900 pb-3 px-6 pt-6">
+	<body class="bg-more-dark pb-3 px-6 pt-6">
     <div class="flex relative">
-      <Navigation class="relative left-0 top-0 flex-none w-32 h-32"/>
-      <div class="absolute mb-6 inset-y-0 right-10 w-3/4 container mx-auto rounded overflow-hidden bg-stone-700">
+      <div class="grid h-screen content-center">
+        <Navigation class="relative left-0 top-0 flex-none w-32 h-32"/>
+      </div>
+      <div class="absolute mb-5 inset-y-0 right-10 w-3/4 container mx-auto rounded overflow-hidden bg-front-dark">
+        <div class="absolute inset-y-0 container mx-4 w-full rounded overflow-hidden bg-front-dark border-2 border-white my-4">
+          
+        </div>
       </div>
     </div>
-      <p>Hello World!</p>
 		<slot />
 	</body>
 </html>
