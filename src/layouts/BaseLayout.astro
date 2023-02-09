@@ -7,7 +7,7 @@ import '../styles/global.css';
 const { title } = Astro.props;
 import Navigation from '../components/Navigation.astro';
 import Card from '../components/Card.astro';
-import HeaderIndex from '../components/HeaderIndex.astro';
+import BodyLayout from '../components/BodyLayout.astro';
 ---
 
 <!DOCTYPE html>
@@ -24,11 +24,7 @@ import HeaderIndex from '../components/HeaderIndex.astro';
       <div class="fixed flex flex-col float-left items-center justify-center h-screen ml-6">
         <Navigation />
       </div>
-      <div class="ml-64 p-5 w-3/4 items-end float-right justify-end container overflow-hidden bg-front-dark mr-10 rounded">
-        <div class="rounded overflow-hidden bg-front-dark border-2 border-white min-h-[1000px]">
-          <HeaderIndex />
-        </div>
-      </div>
+      <BodyLayout />
     </div>
 		<slot />
 	</body>

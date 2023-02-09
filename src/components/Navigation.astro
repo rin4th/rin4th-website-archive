@@ -1,28 +1,38 @@
 ---
 const isHome = false;
+import { Icon } from "astro-icon";
+import '../styles/global.css';
 ---
 
-<div class="w-56 rounded overflow-hidden bg-stone-700">
+<div class="w-56 rounded overflow-hidden bg-front-dark">
   <div class="px-6 py-3">
       { isHome ? <div class="flex flex-row justify-center items-center"><img src="/nijika_1.jpeg" alt="logo img" class="rounded-full w-20 h-20 "></div> : <div></div>}
       <a href="/">
-        <div class="text-cyan-200 px-3 font-bold rounded border-dashed border-white border-2 text-lg mt-2 hover:scale-105">
-          Home
+        <div class="text-cyan-200 px-2 font-bold rounded border-dashed border-white border-2 text-lg mt-2 hover:scale-105">
+          <div class="flex flex-row gap-x-2">
+            <Icon name="ic:round-home" class="text-cyan-200 h-7 w-7" />Home
+          </div>
         </div>
     </a>
       <a href="/blog/">
-        <div class="text-cyan-200 px-3 font-bold rounded border-dashed border-white border-2 text-lg mt-2 hover:scale-105">
-          Blogs
+        <div class="text-cyan-200 px-2 font-bold rounded border-dashed border-white border-2 text-lg mt-2 hover:scale-105">
+          <div class="flex flex-row gap-x-2">
+            <Icon name="ic:round-library-books" class="text-cyan-200 h-7 w-7" />Blogs
+          </div>
         </div>
       </a>
       <a href="/project"> 
-        <div class="text-cyan-200 px-3 font-bold rounded border-dashed border-white border-2 text-lg mt-2 hover:scale-105">
-          Project
+        <div class="text-cyan-200 px-2 font-bold rounded border-dashed border-white border-2 text-lg mt-2 hover:scale-105">
+          <div class="flex flex-row gap-x-2">
+            <Icon name="ph:file-code-fill" class="text-cyan-200 h-7 w-7" />Projects
+          </div>
         </div>
       </a>
       <a href="/about/">
-        <div class="text-cyan-200 px-3 font-bold rounded border-dashed border-white border-2 text-lg mt-2 hover:scale-105">
-          About
+        <div class="text-cyan-200 px-2 font-bold rounded border-dashed border-white border-2 text-lg mt-2 hover:scale-105">
+          <div class="flex flex-row gap-x-2">
+            <Icon name="mdi:about" class="text-cyan-200 h-7 w-7" />About
+          </div>
         </div>
       </a>
   </div>
