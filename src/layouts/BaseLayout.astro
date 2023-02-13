@@ -19,9 +19,9 @@ import BodyLayout from '../components/BodyLayout.astro';
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body class="bg-more-dark px-6 py-6">
-    <div class="flex container flex-row gap-x-3">
-      <div class="fixed flex flex-col float-left items-center justify-center h-screen ml-6">
+	<body class="bg-more-dark sm:px-6 sm:py-5">
+    <div class="flex flex-row container sm:space-x-4 sm:mx-auto">
+      <div class="relative flex flex-col float-left items-center justify-center min-h-fit ml-6 max-sm:hidden">
         <Navigation />
       </div>
       <BodyLayout />
