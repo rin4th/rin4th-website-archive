@@ -3,21 +3,23 @@ export interface Props {
 	title: string;
 }
 
+import SEO, { type Props as SEOProps } from "../components/SEO.astro";
+
 import '../styles/global.css';
-const { title } = Astro.props;
 import Navigation from '../components/Navigation.astro';
 import Card from '../components/Card.astro';
 import BodyLayout from '../components/BodyLayout.astro';
+
+export interface Props {
+	seo: SEOProps;
+}
+const { seo } = Astro.props;
 ---
 
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
+    <SEO {...seo} />
 	</head>
 	<body class="bg-more-dark sm:px-6 sm:py-5">
     <div class="flex flex-row container sm:space-x-4 sm:mx-auto">
